@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:JoyStick">
+    <Style x:Key="ArrowButtonStyle" TargetType="local:ArrowButton">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:ArrowButton">
+                        <Polygon x:Name="border" Fill="{TemplateBinding Background}"
+                                 Points="0,0 2,0 1,2" Stroke="Black" StrokeThickness="2"
+                                 Stretch="Uniform">
+                            <Polygon.LayoutTransform>
+                                <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource Mode=TemplatedParent}}"></RotateTransform>
+                            </Polygon.LayoutTransform>
+                        </Polygon>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Fill" Value="gray"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Fill" Value="yellow"/>
+                            </Trigger>
+                            <Trigger Property="IsLongPress" Value="True">
+                                <Setter TargetName="border" Property="Fill" Value="red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Margin" Value="5, 5, 5, 5"/>
+        </Style.Setters>
+
+    </Style>
+</ResourceDictionary>

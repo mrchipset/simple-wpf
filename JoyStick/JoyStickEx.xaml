@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="JoyStick.JoyStickEx"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JoyStick"
+             mc:Ignorable="d" 
+             d:DesignHeight="256" d:DesignWidth="256">
+    <Grid Width="256" Height="256">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="ButtonStyleDictionary.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <local:ArrowButton x:Name="BtnForward" 
+                           Grid.Row="0" Grid.Column="1"  
+                           Angle="180"
+                           Style="{StaticResource ArrowButtonStyle}"
+                           LongPressTime="500"
+                           LongPress="Btn_LongPress"
+                           LongPressRelease="Btn_LongPressRelease"
+                           Click="Btn_Click"/>
+        
+        <local:ArrowButton x:Name="BtnBackward"
+                           Grid.Row="2" Grid.Column="1"
+                           Angle="0"
+                           Style="{StaticResource ArrowButtonStyle}"
+                           LongPressTime="500"
+                           LongPress="Btn_LongPress"
+                           LongPressRelease="Btn_LongPressRelease"
+                           Click="Btn_Click"/>
+                           
+        <local:ArrowButton x:Name="BtnLeft"
+                           Grid.Row="1" Grid.Column="0"
+                           Angle="90"
+                           Style="{StaticResource ArrowButtonStyle}"
+                           LongPressTime="500"
+                           LongPress="Btn_LongPress"
+                           LongPressRelease="Btn_LongPressRelease"
+                           Click="Btn_Click"/>
+        
+        <local:ArrowButton x:Name="BtnRight"
+                           Grid.Row="1" Grid.Column="2"
+                           Angle="-90"
+                           Style="{StaticResource ArrowButtonStyle}"
+                           LongPressTime="500"
+                           LongPress="Btn_LongPress"
+                           LongPressRelease="Btn_LongPressRelease"
+                           Click="Btn_Click"/>
+
+    </Grid>
+</UserControl>
