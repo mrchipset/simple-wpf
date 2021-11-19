@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:StyledLongPressButton"
         xmlns:lpbtn="clr-namespace:LongPressButton;assembly=LongPressButton"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Styled LongPress Button" Height="450" Width="800">
+    <Grid Width="256" Height="256">
         <Grid.Resources>
             <ResourceDictionary>
                 <ResourceDictionary.MergedDictionaries>
@@ -16,8 +16,22 @@
             </ResourceDictionary>
         </Grid.Resources>
 
-        <lpbtn:LongPressButtonEx Width="96" Height="48" Style="{StaticResource ArrowButtonStyle}">
-            Click Me!
-        </lpbtn:LongPressButtonEx>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <local:ArrowButton x:Name="btn1" Grid.Row="0" Grid.Column="1"  Angle="180" Style="{StaticResource ArrowButtonStyle}"/>
+        <local:ArrowButton x:Name="btn2" Grid.Row="2" Grid.Column="1"  Angle="0" Style="{StaticResource ArrowButtonStyle}"/>
+        <local:ArrowButton x:Name="btn3" Grid.Row="1" Grid.Column="0"  Angle="90" Style="{StaticResource ArrowButtonStyle}"/>
+        <local:ArrowButton x:Name="btn4" Grid.Row="1" Grid.Column="2"  Angle="-90" Style="{StaticResource ArrowButtonStyle}"/>
+
     </Grid>
 </Window>
