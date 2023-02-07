@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CallNativeC": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
