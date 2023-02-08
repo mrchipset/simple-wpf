@@ -27,3 +27,13 @@ void ChangeContent(double* arr, int len)
 	}
 }
 
+void FillStudents(Student* students, int len)
+{
+	for (int i = 0; i < len; ++i) {
+		char* name = "Tom";
+		memcpy(students[i].name, name, strlen(name));
+		students[i].gender = i % 2;
+		students[i].mark = i * 10;
+	}
+}
+

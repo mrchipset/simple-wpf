@@ -60,5 +60,12 @@ namespace CallNativeC
             }
             Console.WriteLine();
         }
+
+        private void btn_call_fill_struct_Click(object sender, RoutedEventArgs e)
+        {
+            Student[] students = new Student[3];
+            CWrapper.FillStudents(students, students.Length);
+            Console.WriteLine(students);
+        }
     }
 }

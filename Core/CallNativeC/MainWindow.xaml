@@ -14,12 +14,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
         <Button x:Name="btn_call_foo" Margin="5" Click="btn_call_foo_Click">Foo</Button>
         <Button x:Name="btn_call_add" Margin="5" Click="btn_call_add_Click" Grid.Column="1">Add</Button>
         <Button x:Name="btn_call_sum" Margin="5" Click="btn_call_sum_Click" Grid.Column="0" Grid.Row="1">Sum</Button>
         <Button x:Name="btn_call_change" Margin="5" Click="btn_call_change_Click" Grid.Column="1" Grid.Row="1">Change</Button>
-
+        <Button x:Name="btn_call_fill_struct" Margin="5" Click="btn_call_fill_struct_Click" Grid.Column="0" Grid.Row="2">Fill</Button>
     </Grid>
 </Window>
