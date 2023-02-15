@@ -23,6 +23,22 @@ namespace MouseHook
         public MainWindow()
         {
             InitializeComponent();
+            MouseHookUtils.MouseEvent += MouseHook_MouseEvent;
+        }
+
+        private void MouseHook_MouseEvent(object? sender, MouseHookEventArgs e)
+        {
+            System.Diagnostics.Trace.WriteLine("Mouse event received");
+        }
+
+        private void Install_Click(object sender, RoutedEventArgs e)
+        {
+            MouseHookUtils.Start("App");
+        }
+
+        private void Uninstall_Click(object sender, RoutedEventArgs e)
+        {
+            MouseHookUtils.Stop();
         }
     }
 }
