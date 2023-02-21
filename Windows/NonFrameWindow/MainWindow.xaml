@@ -1,0 +1,33 @@
+﻿<Window x:Class="NonFrameWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NonFrameWindow"
+        mc:Ignorable="d"
+        WindowStyle ="None" ResizeMode="CanMinimize"
+        Title="MainWindow" Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1"/>
+    </WindowChrome.WindowChrome>
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <Border Padding="64" Background="Transparent">
+                <Border CornerRadius="16" Background="#10FF1010">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="64" />
+                    </Border.Effect>
+                    <ContentPresenter ClipToBounds="True" />
+                </Border>
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+    <Grid>
+        <TextBlock FontSize="20" Foreground="#0083d0"
+                   TextAlignment="Center" VerticalAlignment="Center">
+                <Run Text="Some Content" />
+                <LineBreak />
+                <Run Text="Some more detail content" FontSize="64" FontWeight="Light" />
+        </TextBlock>
+    </Grid>
+</Window>
