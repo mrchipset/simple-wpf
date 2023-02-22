@@ -24,6 +24,7 @@ namespace MouseTracker
 	{
 		public string Info { get; set; } = string.Empty;
 
+		private CursorWindow cursorWindow;
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -36,6 +37,10 @@ namespace MouseTracker
 		{
 			MouseHookUtils.InstallHook();
 			MouseHookUtils.MouseEvent += MouseHookEventHanlder;
+			cursorWindow = new CursorWindow();
+			cursorWindow.Owner = this;
+			cursorWindow.Topmost = true;
+			cursorWindow.Show();
 		}
 
 		private void Window_Unloaded(object sender, RoutedEventArgs e)
@@ -47,6 +52,8 @@ namespace MouseTracker
 		{
 			Info = $"{e.Button}\t{e.Type}\t{e.Point}\t\t{e.Angle}";
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Info)));
+			cursorWindow.Left = e.Point.x - cursorWindow.Width / 2;
+			cursorWindow.Top = e.Point.y - cursorWindow.Height / 2;
 		}
 
 		private void Show_Click(object sender, RoutedEventArgs e)
