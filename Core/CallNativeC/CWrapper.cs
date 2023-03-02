@@ -14,7 +14,12 @@ namespace CallNativeC
         public byte[] name;
         public int gender;
         public int mark;
-    }
+
+		public override string? ToString()
+		{
+			return $"Name:{name}, Gener: {gender}, Mark: {mark}";
+		}
+	}
 
     class CWrapper
     {

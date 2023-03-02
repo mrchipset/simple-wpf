@@ -65,7 +65,10 @@ namespace CallNativeC
         {
             Student[] students = new Student[3];
             CWrapper.FillStudents(students, students.Length);
-            Console.WriteLine(students);
-        }
+            foreach(var student in students)
+            {
+				Console.WriteLine(student);
+			}
+		}
     }
 }
