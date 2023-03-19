@@ -13,16 +13,22 @@
     <Window.Template>
         <ControlTemplate TargetType="Window">
             <Border Padding="0" Background="Transparent">
-                <Border CornerRadius="32" Background="#40FF1010">
-                    <!--<Border.Effect>
+                <!--<Border CornerRadius="32" Background="#40FF1010">
+                    --><!--<Border.Effect>
                         <DropShadowEffect BlurRadius="1" />
-                    </Border.Effect>-->
+                    </Border.Effect>--><!--
                     <ContentPresenter ClipToBounds="True" />
-                </Border>
+                </Border>-->
+                <ContentPresenter ClipToBounds="True"/>
             </Border>
         </ControlTemplate>
     </Window.Template>
-    <Grid>
-        
-    </Grid>
+    <Border Padding="0" Background="Transparent">
+        <Border x:Name="Circle" CornerRadius="32" Background="#40FF1010">
+            <!--<Border.Effect>-->
+                    <!--<DropShadowEffect BlurRadius="1" />-->
+                <!--</Border.Effect>-->
+            <!--<ContentPresenter ClipToBounds="True" />-->
+        </Border>
+    </Border>
 </Window>
