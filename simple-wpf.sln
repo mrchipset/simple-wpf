@@ -45,11 +45,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridDebugLines", "Container
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{2E0BD2C7-206A-4E13-AB9D-3E95642051D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingCommon", "Binding\BindingCommon\BindingCommon.csproj", "{EC199CA2-CAA9-46A1-A5BE-2470D698557E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindingCommon", "Binding\BindingCommon\BindingCommon.csproj", "{EC199CA2-CAA9-46A1-A5BE-2470D698557E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingLabel", "Binding\BindingLabel\BindingLabel.csproj", "{97796AE2-3BFD-4408-9949-2DF61052607C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindingLabel", "Binding\BindingLabel\BindingLabel.csproj", "{97796AE2-3BFD-4408-9949-2DF61052607C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicBindingLabel", "Binding\DynamicBindingLabel\DynamicBindingLabel.csproj", "{163233B7-406F-49B6-B04F-9BC65985CC49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicBindingLabel", "Binding\DynamicBindingLabel\DynamicBindingLabel.csproj", "{163233B7-406F-49B6-B04F-9BC65985CC49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{1A4D51DD-A94E-4E2F-9853-9A968C6F1005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Misc\Configuration\Configuration.csproj", "{086D2D0A-8FB9-4FF6-856B-663F956819A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -253,6 +257,18 @@ Global
 		{163233B7-406F-49B6-B04F-9BC65985CC49}.Release|x64.Build.0 = Release|Any CPU
 		{163233B7-406F-49B6-B04F-9BC65985CC49}.Release|x86.ActiveCfg = Release|Any CPU
 		{163233B7-406F-49B6-B04F-9BC65985CC49}.Release|x86.Build.0 = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|x64.Build.0 = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|x64.ActiveCfg = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|x64.Build.0 = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -275,6 +291,7 @@ Global
 		{EC199CA2-CAA9-46A1-A5BE-2470D698557E} = {2E0BD2C7-206A-4E13-AB9D-3E95642051D4}
 		{97796AE2-3BFD-4408-9949-2DF61052607C} = {2E0BD2C7-206A-4E13-AB9D-3E95642051D4}
 		{163233B7-406F-49B6-B04F-9BC65985CC49} = {2E0BD2C7-206A-4E13-AB9D-3E95642051D4}
+		{086D2D0A-8FB9-4FF6-856B-663F956819A7} = {1A4D51DD-A94E-4E2F-9853-9A968C6F1005}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
