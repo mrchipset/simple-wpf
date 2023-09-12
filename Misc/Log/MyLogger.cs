@@ -26,10 +26,7 @@ namespace Log
         {
             lock (lockObj)
             {
-                if (_MyLogger == null)
-                {
-                    _MyLogger = new MyLogger();
-                }
+                _MyLogger ??= new MyLogger();
                 
             }
             return _MyLogger;
@@ -37,14 +34,11 @@ namespace Log
 
         private MyLogger()
         {
-            if (Logger == null)
-            {
-                Logger = new LoggerConfiguration()
+            Logger ??= new LoggerConfiguration()
                 .WriteTo.Console()
                 .WriteTo.File("log.txt")
                 .WriteTo.Sink(this)
                 .CreateLogger();
-            }
         }
 
         public void Emit(LogEvent logEvent)
