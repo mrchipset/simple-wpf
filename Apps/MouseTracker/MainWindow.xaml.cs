@@ -41,9 +41,9 @@ namespace MouseTracker
 			cursorWindow.Owner = this;
 			cursorWindow.Topmost = true;
 			cursorWindow.Show();
-			cursorWindow.Width = 128;
-			cursorWindow.Height = 128;
-			cursorWindow.Circle.CornerRadius = new CornerRadius(64);
+			cursorWindow.Width = 32;
+			cursorWindow.Height = 32;
+			cursorWindow.Circle.CornerRadius = new CornerRadius(16);
 		}
 
 		private void Window_Unloaded(object sender, RoutedEventArgs e)
