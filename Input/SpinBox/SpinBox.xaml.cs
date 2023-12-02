@@ -89,7 +89,6 @@ namespace SpinBox
         public MySpinBox()
         {
             InitializeComponent();
-            txtBoxValue.Text = Value.ToString();
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
