@@ -75,7 +75,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Async", "Async", "{D6187E98
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncBasic", "Core\Async\AsyncBasic\AsyncBasic.csproj", "{3AE03867-5AA2-42CF-810F-9ED96BE2F60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCancellation", "Core\Async\TaskCancellation\TaskCancellation.csproj", "{426EF93C-EC55-471F-9DB4-011CF68D16E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCancellation", "Core\Async\TaskCancellation\TaskCancellation.csproj", "{426EF93C-EC55-471F-9DB4-011CF68D16E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Uploader", "Apps\S3Uploader\S3Uploader.csproj", "{3C37550F-D451-49C2-BE37-E67EA7013BD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +365,18 @@ Global
 		{426EF93C-EC55-471F-9DB4-011CF68D16E8}.Release|x64.Build.0 = Release|Any CPU
 		{426EF93C-EC55-471F-9DB4-011CF68D16E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{426EF93C-EC55-471F-9DB4-011CF68D16E8}.Release|x86.Build.0 = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|x64.Build.0 = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -395,6 +409,7 @@ Global
 		{D6187E98-7D74-4A95-A234-391A06445298} = {9B4DB9E2-A8CB-452A-9EF9-EF3A1D221B14}
 		{3AE03867-5AA2-42CF-810F-9ED96BE2F60F} = {D6187E98-7D74-4A95-A234-391A06445298}
 		{426EF93C-EC55-471F-9DB4-011CF68D16E8} = {D6187E98-7D74-4A95-A234-391A06445298}
+		{3C37550F-D451-49C2-BE37-E67EA7013BD2} = {32BC90D2-BB8C-454B-86D5-1A9B47DD998A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
