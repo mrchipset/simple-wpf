@@ -68,7 +68,6 @@
                     Console.WriteLine($"Name: {param.Name} Type: {param.ParameterType.Name}");
                 }
             }
-
         }
     }
 }
