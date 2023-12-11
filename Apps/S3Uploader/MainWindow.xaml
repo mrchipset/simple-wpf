@@ -10,8 +10,8 @@
         <Rectangle Margin="10, 10, 10, 10" Fill="LightBlue" RadiusX="10" RadiusY="10" />
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">Bucket:</TextBlock>
-                <TextBox Grid.Column="1" Text="{Binding Bucket}" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="5, 0, 5, 0"/>
+                <TextBox Grid.Column="1" Text="{Binding Bucket}" VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" Margin="5, 0, 5, 0"/>
             </Grid>
 
             <Grid Grid.Column="0" Grid.Row="1" Margin="20 20 20 20">
@@ -42,9 +42,9 @@
                     <Button x:Name="uploadBtn" DockPanel.Dock="Right" Content="Upload" Click="uploadBtn_Click"/>
                     <Button x:Name="browseBtn" DockPanel.Dock="Right" Content="Browse" Click="browseBtn_Click"/>
                     <TextBox x:Name="uploadFileTxtBox" Text="{Binding UploadFile}"
-                             VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5, 0, 5, 0"/>
+                             VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" Margin="5, 0, 5, 0"/>
                 </DockPanel>
-                <TextBlock x:Name="statusTxtBlk" Grid.Row="1" Grid.Column="0" MinHeight="30"/>
+                <TextBlock x:Name="statusTxtBlk" Grid.Row="1" Grid.Column="0" MinHeight="16"/>
             </Grid>
             
         </Grid>
