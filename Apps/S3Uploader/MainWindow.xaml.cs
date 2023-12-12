@@ -225,7 +225,7 @@ namespace S3Uploader
                     {
                         BucketName = LargeBucket,
                         FilePath = UploadLargeFile,
-                        Key = "key"
+                        Key = System.IO.Path.GetFileName(UploadLargeFile)
                     };
 
                     uploadRequest.UploadProgressEvent += UploadRequest_UploadProgressEvent;
