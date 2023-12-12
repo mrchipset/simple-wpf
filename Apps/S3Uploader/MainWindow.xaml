@@ -5,10 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:S3Uploader"
         mc:Ignorable="d"
-        Title="S3Uploader" Height="200" Width="800">
+        Title="S3Uploader" Height="400" Width="800">
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="70" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="5,0,0,0" />
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <Rectangle Margin="10, 10, 10, 10" Fill="LightBlue" RadiusX="10" RadiusY="10" />
-        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Margin="10, 10, 10, 10" Fill="LightBlue" RadiusX="10" RadiusY="10" Grid.Row="0"/>
+        <Grid Grid.Row="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -28,7 +41,7 @@
                 <TextBox Grid.Column="1" Text="{Binding Bucket}" VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" Margin="5, 0, 5, 0"/>
             </Grid>
 
-            <Grid Grid.Column="0" Grid.Row="1" Margin="20 20 20 20">
+            <Grid Grid.Column="0" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
@@ -37,7 +50,7 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <DockPanel Grid.Row="0" Grid.Column="0" MinHeight="20">
+                <DockPanel Grid.Row="0" Grid.Column="0" MinHeight="20" Margin="20, 0, 20, 0">
                     <TextBlock VerticalAlignment="Center" DockPanel.Dock="Left">Choose File:</TextBlock>
                     <Button x:Name="uploadBtn" DockPanel.Dock="Right" Content="Upload" Click="uploadBtn_Click"/>
                     <Button x:Name="browseBtn" DockPanel.Dock="Right" Content="Browse" Click="browseBtn_Click"/>
@@ -47,6 +60,51 @@
                 <TextBlock x:Name="statusTxtBlk" Grid.Row="1" Grid.Column="0" MinHeight="16"/>
             </Grid>
             
+        </Grid>
+
+        <Rectangle Margin="10, 10, 10, 10" Fill="LightBlue" RadiusX="10" RadiusY="10" Grid.Row="1"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0" Margin="20 20 20 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">Bucket:</TextBlock>
+                <TextBox Grid.Column="1" Text="{Binding LargeBucket}" VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" Margin="5, 0, 5, 0"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="1" Margin="20 20 20 20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <DockPanel Grid.Row="0" Grid.Column="0" MinHeight="20">
+                    <TextBlock VerticalAlignment="Center" DockPanel.Dock="Left">Choose File:</TextBlock>
+                    <Button x:Name="uploadLargeBtn" DockPanel.Dock="Right" Content="Upload" Click="uploadLargeBtn_Click"/>
+                    <Button x:Name="browseLargeBtn" DockPanel.Dock="Right" Content="Browse" Click="browseLargeBtn_Click"/>
+                    <TextBox x:Name="uploadFileLargeTxtBox" Text="{Binding UploadLargeFile}"
+                             VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" Margin="5, 0, 5, 0"/>
+                </DockPanel>
+                <ProgressBar x:Name="uploadProgress" Grid.Row="1" Grid.Column="0" Margin="0 10 0 10" MinHeight="24"
+                             Minimum="0" Maximum="100"/>
+                <TextBlock x:Name="statusLargeTxtBlk" Grid.Row="2" Grid.Column="0" MinHeight="16" Text="Status: 0%"/>
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>
