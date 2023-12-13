@@ -2,6 +2,12 @@
 This repository is intend to maintain the codes during learning WPF. I categorized the topics through different folders according to my ideas.
 
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mrchipset/simple-wpf&type=Date)](https://star-history.com/#mrchipset/simple-wpf)
+
+
+
 ## Topics
 
 - [Apps](Apps) - Some small Apps to demostrate WPF usage
