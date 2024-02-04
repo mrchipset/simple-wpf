@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S3Uploader", "Apps\S3Upload
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{090C5823-4008-41FD-8BC7-F8D593D9A143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToastNotification", "Notifications\ToastNotification\ToastNotification.csproj", "{83D6AB8F-9606-43B3-BA70-342E2365B672}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToastNotification", "Notifications\ToastNotification\ToastNotification.csproj", "{83D6AB8F-9606-43B3-BA70-342E2365B672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXMLRpcDemo", "Core\SimpleXMLRpcDemo\SimpleXMLRpcDemo.csproj", "{574CFDCF-576A-413E-A497-D0ABB992FCDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -393,6 +395,18 @@ Global
 		{83D6AB8F-9606-43B3-BA70-342E2365B672}.Release|x64.Build.0 = Release|Any CPU
 		{83D6AB8F-9606-43B3-BA70-342E2365B672}.Release|x86.ActiveCfg = Release|Any CPU
 		{83D6AB8F-9606-43B3-BA70-342E2365B672}.Release|x86.Build.0 = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|x64.Build.0 = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|x64.ActiveCfg = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|x64.Build.0 = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -427,6 +441,7 @@ Global
 		{426EF93C-EC55-471F-9DB4-011CF68D16E8} = {D6187E98-7D74-4A95-A234-391A06445298}
 		{3C37550F-D451-49C2-BE37-E67EA7013BD2} = {32BC90D2-BB8C-454B-86D5-1A9B47DD998A}
 		{83D6AB8F-9606-43B3-BA70-342E2365B672} = {090C5823-4008-41FD-8BC7-F8D593D9A143}
+		{574CFDCF-576A-413E-A497-D0ABB992FCDF} = {9B4DB9E2-A8CB-452A-9EF9-EF3A1D221B14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
