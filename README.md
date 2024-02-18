@@ -18,4 +18,5 @@ This repository is intend to maintain the codes during learning WPF. I categoriz
 - [Input](Input) - Collections of custom input components
 - [Misc](Misc) - Miscellaneous including log, configuration
 - [MVVM](MVVM) - Model-View-ViewModel usage
+- [Notifications](Notifications) - Demos to show Notifications
 - [Windows](Windows) - Usage and customize window components, such as frameless window
