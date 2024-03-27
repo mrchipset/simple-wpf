@@ -89,7 +89,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F1BBDEFA-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperSqliteDemo", "Core\Data\DapperSqliteDemo\DapperSqliteDemo.csproj", "{4334F5C0-1579-4C4A-9805-18E1F390724D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationWithDynamicXamlResource", "Misc\LocalizationWithDynamicXamlResource\LocalizationWithDynamicXamlResource.csproj", "{796E4088-6B07-4996-BFDF-328FC784F650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalizationWithDynamicXamlResource", "Misc\LocalizationWithDynamicXamlResource\LocalizationWithDynamicXamlResource.csproj", "{796E4088-6B07-4996-BFDF-328FC784F650}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{94775148-134D-41B3-941E-151B2E5F94E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomRenderControl", "Core\Controls\CustomRenderControl\CustomRenderControl.csproj", "{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -437,6 +441,18 @@ Global
 		{796E4088-6B07-4996-BFDF-328FC784F650}.Release|x64.Build.0 = Release|Any CPU
 		{796E4088-6B07-4996-BFDF-328FC784F650}.Release|x86.ActiveCfg = Release|Any CPU
 		{796E4088-6B07-4996-BFDF-328FC784F650}.Release|x86.Build.0 = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Debug|x86.Build.0 = Debug|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|x64.Build.0 = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -475,6 +491,8 @@ Global
 		{F1BBDEFA-4144-4C67-9E6A-50BCF4EA62E3} = {9B4DB9E2-A8CB-452A-9EF9-EF3A1D221B14}
 		{4334F5C0-1579-4C4A-9805-18E1F390724D} = {F1BBDEFA-4144-4C67-9E6A-50BCF4EA62E3}
 		{796E4088-6B07-4996-BFDF-328FC784F650} = {1A4D51DD-A94E-4E2F-9853-9A968C6F1005}
+		{94775148-134D-41B3-941E-151B2E5F94E6} = {9B4DB9E2-A8CB-452A-9EF9-EF3A1D221B14}
+		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C} = {94775148-134D-41B3-941E-151B2E5F94E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
