@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace CustomRenderControl
 {
@@ -19,6 +20,11 @@ namespace CustomRenderControl
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MyCustomRenderControl_Click(object sender, RoutedEventArgs e)
+        {
+            Trace.WriteLine("Clicked");
         }
     }
 }

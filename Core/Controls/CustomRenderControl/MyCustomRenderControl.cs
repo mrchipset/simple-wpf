@@ -6,12 +6,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
+using System.Diagnostics;
 
 namespace CustomRenderControl
 {
     internal class MyCustomRenderControl : Control
     {
+        public static readonly RoutedEvent ClickEvent = EventManager.RegisterRoutedEvent(
+                "Click",
+                RoutingStrategy.Bubble,
+                typeof(RoutedEventHandler),
+                typeof(MyCustomRenderControl)
+            );
+
+        public event RoutedEventHandler Click
+        {
+            add => AddHandler(ClickEvent, value);
+            remove => RemoveHandler(ClickEvent, value);
+        }
+
+        private bool _clicking = false;
+
         public MyCustomRenderControl() : base()
         {
             
@@ -55,6 +72,45 @@ namespace CustomRenderControl
         {
             Size size = base.ArrangeOverride(arrangeBounds);
             return size;
+        }
+
+        protected override void OnMouseEnter(MouseEventArgs e)
+        {
+            base.OnMouseEnter(e);
+            Trace.WriteLine("Mouse Enter");
+            Trace.Flush();
+
+            _clicking = false;
+        }
+
+        protected override void OnMouseLeave(MouseEventArgs e)
+        {
+            base.OnMouseLeave(e);
+            Trace.WriteLine("Mouse Leave");
+            Trace.Flush();
+
+            _clicking = false;
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            Trace.WriteLine("Mouse Left Button Down");
+            Trace.Flush();
+
+            _clicking = true;
+        }
+
+        protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonUp(e);
+            Trace.WriteLine("Mouse Left Button Up");
+            Trace.Flush();
+            if (_clicking)
+            {
+                RaiseEvent(new RoutedEventArgs(ClickEvent));
+                _clicking = false;
+            }
         }
     }
 }
