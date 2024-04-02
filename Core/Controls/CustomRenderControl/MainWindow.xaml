@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <local:MyCustomRenderControl Width="64" Height="72" Click="MyCustomRenderControl_Click"/>
+        <local:MyCustomRenderControl MinWidth="64" MinHeight="72" Click="MyCustomRenderControl_Click"/>
     </Grid>
 </Window>
