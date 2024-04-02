@@ -20,7 +20,9 @@ namespace CustomLayoutControl
             double spacing = Spacing;
             foreach (UIElement child in InternalChildren)
             {
-                child.Arrange(new Rect(new Point(offsetX, offsetY), child.DesiredSize));
+                Size size = child.DesiredSize;
+                size.Height = finalSize.Height;
+                child.Arrange(new Rect(new Point(offsetX, offsetY), size));
                 offsetX += child.DesiredSize.Width + spacing;
             }
             return finalSize;
@@ -36,7 +38,7 @@ namespace CustomLayoutControl
                
                 child.Measure(availableSize);
                 panelDesiredSize.Width += child.DesiredSize.Width + spacing;
-                panelDesiredSize.Height = Height;
+                panelDesiredSize.Height = RenderSize.Height;
             }
             return panelDesiredSize;
         }

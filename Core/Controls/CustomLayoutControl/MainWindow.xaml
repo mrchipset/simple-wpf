@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <local:CustomLayoutPanel Height="48" Margin="5" Grid.Row="0" Spacing="5">
+        <local:CustomLayoutPanel Margin="0" Grid.Row="0" Spacing="5" MaxHeight="64" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Button>Button 1</Button>
             <Button>Button 2</Button>
             <Button>Button 3</Button>
