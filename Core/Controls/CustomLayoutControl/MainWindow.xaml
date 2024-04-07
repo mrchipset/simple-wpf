@@ -6,12 +6,19 @@
         xmlns:local="clr-namespace:CustomLayoutControl"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Margin" Value="5"/>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
     <Grid Margin="8">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <local:CustomLayoutPanel Margin="0" Grid.Row="0" Spacing="5" MaxHeight="64" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <local:CustomLayoutPanel Margin="0" Grid.Row="0" Spacing="5" MaxHeight="64">
             <Button>Button 1</Button>
             <Button>Button 2</Button>
             <Button>Button 3</Button>
