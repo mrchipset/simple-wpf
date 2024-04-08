@@ -95,7 +95,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{94
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomRenderControl", "Core\Controls\CustomRenderControl\CustomRenderControl.csproj", "{2FE74A57-B8D1-4A7F-8262-F62BAADF242C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLayoutControl", "Core\Controls\CustomLayoutControl\CustomLayoutControl.csproj", "{426DEE48-6540-45A2-AAE2-713E243F2303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLayoutControl", "Core\Controls\CustomLayoutControl\CustomLayoutControl.csproj", "{426DEE48-6540-45A2-AAE2-713E243F2303}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Animation", "Animation", "{75B80889-DBF6-452F-955C-55A5CD5F8855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipNumber", "Animation\FlipNumber\FlipNumber.csproj", "{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -467,6 +471,18 @@ Global
 		{426DEE48-6540-45A2-AAE2-713E243F2303}.Release|x64.Build.0 = Release|Any CPU
 		{426DEE48-6540-45A2-AAE2-713E243F2303}.Release|x86.ActiveCfg = Release|Any CPU
 		{426DEE48-6540-45A2-AAE2-713E243F2303}.Release|x86.Build.0 = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|x64.Build.0 = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|x64.ActiveCfg = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|x64.Build.0 = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -508,6 +524,7 @@ Global
 		{94775148-134D-41B3-941E-151B2E5F94E6} = {9B4DB9E2-A8CB-452A-9EF9-EF3A1D221B14}
 		{2FE74A57-B8D1-4A7F-8262-F62BAADF242C} = {94775148-134D-41B3-941E-151B2E5F94E6}
 		{426DEE48-6540-45A2-AAE2-713E243F2303} = {94775148-134D-41B3-941E-151B2E5F94E6}
+		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0} = {75B80889-DBF6-452F-955C-55A5CD5F8855}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
