@@ -7,8 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="400">
     <UniformGrid>
-        <Border BorderThickness="3" BorderBrush="Black" CornerRadius="15" Background="Black">
-            <Viewport3D>
+            <Viewport3D x:Name="viewport">
                 <Viewport3D.Camera>
                     <OrthographicCamera Position="0, 0, 4" LookDirection="0, 0, -1" Width="2"/>
                     <!--<PerspectiveCamera Position="0, 0, 3" LookDirection="0, 0, -1"/>-->
@@ -132,43 +131,44 @@ TextureCoordinates="0,0 0,0.5 0,1 1,1 1,0.5 1,0" TriangleIndices="1 2 3 1 3 4"/>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
 
-
                 <!-- Trigger the rotation animation when the 3D object loads. -->
                 <Viewport3D.Triggers>
-                    <EventTrigger RoutedEvent="Viewport3D.Loaded">
+                <EventTrigger RoutedEvent="local:FlipDigitControl.FlipAnimateTrigger">
                         <BeginStoryboard>
                             <Storyboard>
 
                                 <!-- This animation animates the Angle property of the AxisAngleRotation3D
-           making the 3D object rotate from -60 degrees to 60 degrees. -->
+    making the 3D object rotate from -60 degrees to 60 degrees. -->
                                 <DoubleAnimation 
-       Storyboard.TargetName="myAngleRotation1" 
-       Storyboard.TargetProperty="Angle" 
-       From="0" To="90" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
+Storyboard.TargetName="myAngleRotation1" 
+Storyboard.TargetProperty="Angle" 
+From="0" To="90" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
 
                                 <!-- This animation animates the Axis property of the AxisAngleRotation3D
-           making the 3D wobble as it rotates. -->
+    making the 3D wobble as it rotates. -->
                                 <DoubleAnimation 
-       Storyboard.TargetName="myAngleRotation2" 
-       Storyboard.TargetProperty="Angle" 
-       From="90" To="0" BeginTime="0:0:0.5" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
+Storyboard.TargetName="myAngleRotation2" 
+Storyboard.TargetProperty="Angle" 
+From="90" To="0" BeginTime="0:0:0.5" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
 
                                 <DoubleAnimation 
-       Storyboard.TargetName="myAngleRotation1" 
-       Storyboard.TargetProperty="Angle" 
-       From="0" To="90" BeginTime="0:0:1.0" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
+Storyboard.TargetName="myAngleRotation1" 
+Storyboard.TargetProperty="Angle" 
+From="0" To="90" BeginTime="0:0:1.0" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
                                 <!-- This animation animates the Axis property of the AxisAngleRotation3D
-           making the 3D wobble as it rotates. -->
+    making the 3D wobble as it rotates. -->
                                 <DoubleAnimation 
-       Storyboard.TargetName="myAngleRotation2" 
-       Storyboard.TargetProperty="Angle" 
-       From="90" To="0" BeginTime="0:0:1.5" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
+Storyboard.TargetName="myAngleRotation2" 
+Storyboard.TargetProperty="Angle" 
+From="90" To="0" BeginTime="0:0:1.5" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </Viewport3D.Triggers>
+
+                
             </Viewport3D>
-        </Border>
+        
         
     </UniformGrid>
     

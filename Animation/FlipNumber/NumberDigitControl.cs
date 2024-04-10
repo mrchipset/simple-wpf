@@ -12,19 +12,27 @@ namespace FlipNumber
 {
     public class NumberDigitControl : Control
     {
-        public static readonly DependencyProperty NumberProperty = DependencyProperty.Register("Number", typeof(int), typeof(NumberDigitControl));   
+        public static readonly DependencyProperty NumberProperty
+            = DependencyProperty.Register(
+                "Number",
+                typeof(int),
+                typeof(NumberDigitControl),
+                new PropertyMetadata(0, OnNumberPropertyChanged)
+                );   
+
         public int Number
         {
             get
             {
                 int? v = GetValue(NumberProperty) as int?;
-                return v ?? 0;
+                return v ?? 1;
             }
             set
             {
                 SetValue(NumberProperty, value);
             }
         }
+
         public NumberDigitControl() : base()
         {
             MinWidth = 32;
@@ -63,6 +71,17 @@ namespace FlipNumber
             //drawingContext.DrawRectangle(Background ?? Brushes.Black, new Pen(BorderBrush ?? Brushes.White, 1), new Rect(0, 0, this.ActualWidth, this.ActualHeight));
             drawingContext.DrawRoundedRectangle(Background ?? Brushes.Black, new Pen(BorderBrush ?? Brushes.White, 1), new Rect(15, 15, this.ActualWidth - 30, this.ActualHeight - 30), 15, 15);
             drawingContext.DrawText(formattedText, new Point(centerX, centerY));
+        }
+
+        /// <summary>
+        /// Update the visual after property changed.
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="e"></param>
+        private static void OnNumberPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            NumberDigitControl? numberDigitControl = d as NumberDigitControl;
+            numberDigitControl?.InvalidateVisual();
         }
     }
 }
