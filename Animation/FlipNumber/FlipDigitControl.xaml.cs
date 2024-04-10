@@ -86,17 +86,22 @@ namespace FlipNumber
         {
             InitializeComponent();
             this.DataContext = this;
-            TriggerAnimate = true;
-            timer.Tick += Timer_Tick;
-            timer.Interval = TimeSpan.FromSeconds(4);
-            timer.Start();
+            TriggerAnimate = false;
             FlipAnimateTrigger += FlipDigitControl_FlipAnimateTrigger;
+            timer.Tick += Timer_Tick;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Start();
+            AnimateStory.Completed += AnimateStory_Completed;
+        }
 
-
+        private void AnimateStory_Completed(object? sender, EventArgs e)
+        {
+            TriggerAnimate = true;
         }
 
         private void FlipDigitControl_FlipAnimateTrigger(object sender, RoutedEventArgs e)
         {
+            AnimateStory.Begin();
             System.Diagnostics.Trace.WriteLine("Flip Trigger");
         }
 
@@ -104,6 +109,11 @@ namespace FlipNumber
         {
             //throw new NotImplementedException();
             RaiseEvent(new FlipAnimateTriggerRoutedEventArgs(FlipAnimateTriggerEvent, this));
+            PrevNum = CurrentNum;
+            if(++CurrentNum > 9)
+            {
+                CurrentNum = 0;
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
