@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -66,7 +67,7 @@ namespace FlipNumber
 
         public bool TriggerAnimate
         {
-            get => TriggerAnimate;
+            get => triggerAnimate;
             set
             {
                 if (triggerAnimate != value)
@@ -97,23 +98,30 @@ namespace FlipNumber
         private void AnimateStory_Completed(object? sender, EventArgs e)
         {
             TriggerAnimate = true;
+            PrevNum = CurrentNum;
         }
 
         private void FlipDigitControl_FlipAnimateTrigger(object sender, RoutedEventArgs e)
         {
-            AnimateStory.Begin();
-            System.Diagnostics.Trace.WriteLine("Flip Trigger");
+            //AnimateStory.Begin();
+            System.Diagnostics.Trace.WriteLine($"Flip Trigger");
+            TriggerAnimate = false;
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
             //throw new NotImplementedException();
-            RaiseEvent(new FlipAnimateTriggerRoutedEventArgs(FlipAnimateTriggerEvent, this));
-            PrevNum = CurrentNum;
-            if(++CurrentNum > 9)
+            //PrevNum = CurrentNum;
+            if (TriggerAnimate)
             {
-                CurrentNum = 0;
+                if (++CurrentNum > 9)
+                {
+                    CurrentNum = 0;
+                }
+                AnimateStory.Begin();
+                RaiseEvent(new FlipAnimateTriggerRoutedEventArgs(FlipAnimateTriggerEvent, this));
             }
+
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

@@ -13,20 +13,8 @@
                 </Viewport3D.Camera>
 
                 <!-- Button on 3D Upper Background -->
-                <Viewport2DVisual3D>
-                    <!-- Give the plane a slight rotation -->
-                    <Viewport2DVisual3D.Transform>
-                        <RotateTransform3D>
-                            <RotateTransform3D.CenterX>0</RotateTransform3D.CenterX>
-                            <RotateTransform3D.CenterY>0</RotateTransform3D.CenterY>
-                            <RotateTransform3D.CenterZ>0</RotateTransform3D.CenterZ>
-                            <RotateTransform3D.Rotation>
-                                <AxisAngleRotation3D Angle="0" Axis="1, 0, 0" />
-                            </RotateTransform3D.Rotation>
-                        </RotateTransform3D>
-                    </Viewport2DVisual3D.Transform>
-
-                    <!-- The Geometry, Material, and Visual for the Viewport2DVisual3D -->
+            <Viewport2DVisual3D>
+            <!-- The Geometry, Material, and Visual for the Viewport2DVisual3D -->
                     <Viewport2DVisual3D.Geometry>
                         <MeshGeometry3D Positions="-1,2,0 -1,0,0 -1,-2,0 1,-2,0, 1,0,0 1,2,0"
                 TextureCoordinates="0,0 0,0.5 0,1 1,1 1,0.5 1,0" TriangleIndices="0 1 4 0 4 5"/>
@@ -49,7 +37,7 @@
                             <RotateTransform3D.CenterY>0</RotateTransform3D.CenterY>
                             <RotateTransform3D.CenterZ>0</RotateTransform3D.CenterZ>
                             <RotateTransform3D.Rotation>
-                                <AxisAngleRotation3D x:Name="myAngleRotation1" Angle="80" Axis="1, 0, 0" />
+                                <AxisAngleRotation3D x:Name="myAngleRotation1" Angle="0" Axis="1, 0, 0" />
                             </RotateTransform3D.Rotation>
                         </RotateTransform3D>
                     </Viewport2DVisual3D.Transform>
@@ -96,20 +84,8 @@
                 </Viewport2DVisual3D>
 
                 <!-- Button on 3D Lower Background -->
-                <Viewport2DVisual3D>
-                    <!-- Give the plane a slight rotation -->
-                    <Viewport2DVisual3D.Transform>
-                        <RotateTransform3D>
-                            <RotateTransform3D.CenterX>0</RotateTransform3D.CenterX>
-                            <RotateTransform3D.CenterY>0</RotateTransform3D.CenterY>
-                            <RotateTransform3D.CenterZ>0</RotateTransform3D.CenterZ>
-                            <RotateTransform3D.Rotation>
-                                <AxisAngleRotation3D Angle="0" Axis="-1, 0, 0" />
-                            </RotateTransform3D.Rotation>
-                        </RotateTransform3D>
-                    </Viewport2DVisual3D.Transform>
-
-                    <!-- The Geometry, Material, and Visual for the Viewport2DVisual3D -->
+        <Viewport2DVisual3D>
+            <!-- The Geometry, Material, and Visual for the Viewport2DVisual3D -->
                     <Viewport2DVisual3D.Geometry>
                         <MeshGeometry3D Positions="-1,2,0 -1,0,0 -1,-2,0 1,-2,0, 1,0,0 1,2,0"
 TextureCoordinates="0,0 0,0.5 0,1 1,1 1,0.5 1,0" TriangleIndices="1 2 3 1 3 4"/>
@@ -134,17 +110,17 @@ TextureCoordinates="0,0 0,0.5 0,1 1,1 1,0.5 1,0" TriangleIndices="1 2 3 1 3 4"/>
             <EventTrigger RoutedEvent="local:FlipDigitControl.Loaded">
                         <BeginStoryboard>
                     <Storyboard x:Name="AnimateStory">
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="myAngleRotation1" Storyboard.TargetProperty="Angle">
+                            <DiscreteDoubleKeyFrame Value="0"  KeyTime="0:0:0"/>
+                        </DoubleAnimationUsingKeyFrames>
                         <DoubleAnimation 
 Storyboard.TargetName="myAngleRotation1" 
 Storyboard.TargetProperty="Angle" 
-From="0" To="90" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
-
-                                 <!--This animation animates the Axis property of the AxisAngleRotation3D
-    making the 3D wobble as it rotates.-->
+From="0" To="90" BeginTime="0:0:0.2" Duration="0:0:0.3" AutoReverse="False"  RepeatBehavior="1x"/>
                         <DoubleAnimation 
 Storyboard.TargetName="myAngleRotation2" 
 Storyboard.TargetProperty="Angle" 
-From="90" To="0" BeginTime="0:0:0.5" Duration="0:0:0.5" AutoReverse="False"  RepeatBehavior="1x"/>
+From="90" To="0" BeginTime="0:0:0.5" Duration="0:0:0.3" AutoReverse="False"  RepeatBehavior="1x"/>
                     </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
