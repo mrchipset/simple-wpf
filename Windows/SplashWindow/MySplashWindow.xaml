@@ -1,0 +1,30 @@
+﻿<Window x:Class="SplashWindow.MySplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SplashWindow"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="CanMinimize"
+        Title="SplashWindow" Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1"/>
+    </WindowChrome.WindowChrome>
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <Border Padding="32" Background="Transparent">
+                <!--<Border CornerRadius="16" Background="#20C0C0C0">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="32" />
+                    </Border.Effect>-->
+                <ContentPresenter ClipToBounds="True" />
+                <!--</Border>-->
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+    <Grid>
+        <!--<Button>11</Button>-->
+        <Image Source="/Resources/splash_.png" Stretch="Fill"/>
+    </Grid>
+</Window>
