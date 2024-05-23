@@ -21,34 +21,45 @@ namespace SplashWindow
     /// </summary>
     public partial class MySplashWindow : Window
     {
-        public int FadeoutDuration { get; set; } = 200;
-        private Storyboard storyboard = new Storyboard();
-        private DoubleAnimation fadeAnimation = new DoubleAnimation();
+        public int FadeOutDuration { get; set; } = 200;
+        private Storyboard fadeOutStoryboard = new Storyboard();
+        private DoubleAnimation fadeOutAnimation = new DoubleAnimation();
+
+        public int FadeInDuration { get; set; } = 600;
+        private Storyboard fadeInStoryboard = new Storyboard();
+        private DoubleAnimation fadeInAnimation = new DoubleAnimation();
 
         public MySplashWindow()
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Topmost = true;
             InitializeComponent();
 
-            Dispatcher.BeginInvoke(DispatcherPriority.Loaded, (DispatcherOperationCallback)(arg =>
-            {
-                ((MySplashWindow)arg).Fadeout(FadeoutDuration);
-                return null;
-            }), this);
+            //Dispatcher.BeginInvoke(DispatcherPriority.Loaded, (DispatcherOperationCallback)(arg =>
+            //{
+            //    ((MySplashWindow)arg).Fadeout(FadeOutDuration);
+            //    return null;
+            //}), this);
 
-            storyboard.Completed += FadeoutCompleted;
+            fadeOutStoryboard.Completed += FadeoutCompleted;
 
+        }
+
+        public void FadeClose()
+        {
+            Fadeout(FadeOutDuration);
         }
 
         private void Fadeout(int fadeoutDuration)
         {
-            Storyboard.SetTarget(fadeAnimation, this);
-            Storyboard.SetTargetProperty(fadeAnimation,new PropertyPath("Opacity"));
-            fadeAnimation.From = 1;
-            fadeAnimation.To = 0;
-            fadeAnimation.Duration = TimeSpan.FromMilliseconds(fadeoutDuration);
-            storyboard.Children.Add(fadeAnimation);
-            storyboard.Begin();
+            fadeOutStoryboard.Children.Clear();
+            Storyboard.SetTarget(fadeOutAnimation, this);
+            Storyboard.SetTargetProperty(fadeOutAnimation,new PropertyPath("Opacity"));
+            fadeOutAnimation.From = 1;
+            fadeOutAnimation.To = 0;
+            fadeOutAnimation.Duration = TimeSpan.FromMilliseconds(fadeoutDuration);
+            fadeOutStoryboard.Children.Add(fadeOutAnimation);
+            fadeOutStoryboard.Begin();
 
         }
 
@@ -65,6 +76,18 @@ namespace SplashWindow
                     return null;
                 }), this);
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            fadeInStoryboard.Children.Clear();
+            Storyboard.SetTarget(fadeInAnimation, this);
+            Storyboard.SetTargetProperty(fadeInAnimation, new PropertyPath("Opacity"));
+            fadeInAnimation.From = 0;
+            fadeInAnimation.To = 1;
+            fadeInAnimation.Duration = TimeSpan.FromMilliseconds(FadeInDuration);
+            fadeInStoryboard.Children.Add(fadeInAnimation);
+            fadeInStoryboard.Begin();
         }
     }
 }
