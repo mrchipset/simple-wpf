@@ -101,7 +101,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Animation", "Animation", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlipNumber", "Animation\FlipNumber\FlipNumber.csproj", "{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashWindow", "Windows\SplashWindow\SplashWindow.csproj", "{0B2EE542-389F-4352-912F-33507BB46F96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SplashWindow", "Windows\SplashWindow\SplashWindow.csproj", "{0B2EE542-389F-4352-912F-33507BB46F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FadeOutClosingWindow", "Windows\FadeOutClosingWindow\FadeOutClosingWindow.csproj", "{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -497,6 +499,18 @@ Global
 		{0B2EE542-389F-4352-912F-33507BB46F96}.Release|x64.Build.0 = Release|Any CPU
 		{0B2EE542-389F-4352-912F-33507BB46F96}.Release|x86.ActiveCfg = Release|Any CPU
 		{0B2EE542-389F-4352-912F-33507BB46F96}.Release|x86.Build.0 = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|x64.Build.0 = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Debug|x86.Build.0 = Debug|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|x64.ActiveCfg = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|x64.Build.0 = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -540,6 +554,7 @@ Global
 		{426DEE48-6540-45A2-AAE2-713E243F2303} = {94775148-134D-41B3-941E-151B2E5F94E6}
 		{6057DA62-0A3F-4E18-BCFA-30CECEFEF2E0} = {75B80889-DBF6-452F-955C-55A5CD5F8855}
 		{0B2EE542-389F-4352-912F-33507BB46F96} = {8CD3C3B1-ACB0-4F19-8DA3-DF558514F757}
+		{8D6B7A3B-6E60-4DC0-90FE-A1FDEB4E8E52} = {8CD3C3B1-ACB0-4F19-8DA3-DF558514F757}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BFC28F5-C1D3-44C7-838A-E69AAE0F6662}
