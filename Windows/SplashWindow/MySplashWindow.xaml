@@ -26,7 +26,7 @@
     </Window.Template>
     <Grid>
         <!--<Button>11</Button>-->
-        <Image Source="/Resources/splash_.png" Stretch="Fill" Margin="0 0 0 30"/>
+        <Image Source="/Resources/Simple-WPF.png" Stretch="Fill" Margin="0 0 0 30"/>
         <Label x:Name="content" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 30" FontSize="32" Foreground="Red">Loading...</Label>
         <ProgressBar x:Name="progress" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="5"/>
     </Grid>

@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\splash_.png" />
+    <None Remove="Resources\Simple-WPF.png" />
     <None Remove="splash_.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\splash_.png" />
+    <Resource Include="Resources\Simple-WPF.png" />
   </ItemGroup>
 
 </Project>
